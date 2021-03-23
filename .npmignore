@@ -1,0 +1,10 @@
+# dependencies
+/node_modules
+
+# source files
+/src
+/public
+/sandbox.config.json
+
+# sourcemap files
+*.map

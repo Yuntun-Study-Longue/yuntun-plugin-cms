@@ -1,0 +1,10 @@
+{
+    "presets": [
+      "razzle/babel",
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "babel-plugin-styled-components",
+      "transform-class-properties"
+    ]
+}
