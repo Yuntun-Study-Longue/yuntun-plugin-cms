@@ -7,6 +7,12 @@ export const render = async (req, res) => {
 export const routes = () => {
   return [
     '/', 
-    '/FDGraph',
+    '/login',
+    '/docList',
+    '/fundamentalDataManagement',
+    '/requirementManagement',
+    '/requriementFullPage',
+    '/historyRecord',
+    '/requirementDocumentConfig'
   ];
 };
