@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { Menu } from 'antd'
 import { createFromIconfontCN } from '@ant-design/icons';
 const IconFont = createFromIconfontCN({
@@ -54,18 +55,16 @@ const links = [
 ]
 
 class SiderMenu extends Component {
-  componentDidMount() {
-    console.log(this.props, '=== props')
-  }
+  componentDidMount() {}
   onClick = item => window.open(item.key, '_self')
 
   render() {
     return (
-      <Menu onClick={this.onClick} theme="dark">
+      <Menu theme="dark">
         {links.map(link => (
           <Menu.Item key={link.url}>
             {link.icon && <IconFont type={`icon-${link.icon}`} />}
-            <span>{link.label}</span>
+            <Link to={link.url} style={{display: this.props.isCollapsed ? 'block' : 'inline'}}>{link.label}</Link>
           </Menu.Item>
         ))}
       </Menu>
@@ -73,4 +72,9 @@ class SiderMenu extends Component {
   }
 }
 
-export default SiderMenu
+export default connect(
+  state => ({
+    isCollapsed: state.layout.isCollapsed
+  }),
+  null
+)(SiderMenu)

@@ -1,25 +1,31 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import { renderToString } from 'react-dom/server';
+import { Provider } from "react-redux";
 import { Frontload, frontloadServerRender } from "react-frontload";
 // why Loadable? cause React.lazy and Suspense are not yet available for server-side rendering. 
 import Loadable from "react-loadable";
 import App from './app/app';
+import createStore from "./store";
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
 export const renderApp = async (request, h) => {
+    const { store } = createStore(request.url);
+
     const context  = {};
     const modules = [];
 
     const markup = await frontloadServerRender(() => 
         renderToString(
             <Loadable.Capture report={m => modules.push(m)}>
+            <Provider store={store}>
             <StaticRouter context={context} location={request.url}>
             <Frontload isServer={true}>
             <App />
             </Frontload>
             </StaticRouter>
+            </Provider>
             </Loadable.Capture>
         )
     )

@@ -1,21 +1,26 @@
 import React from 'react';
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { withRouter } from "react-router";
 import { Layout, Icon } from 'antd'
 import SiderMenu from './SiderMenu'
 import Routes from "./routes";
+import { toggleSiderMenu } from "../modules/layout";
 import './app.css';
 
 const { Sider, Content, Header } = Layout
 
-const App = () => (
+const App = ({ toggleSiderMenu }) => (
   <Layout className="app">
     <Header className="app__header">
       <h2 className="app__logo">
-        <Icon type="ant-design" /> Razzle-Ant Design
+        <Icon type="ant-design" /> IDP-Ant Design
       </h2>
     </Header>
 
     <Layout className="app__content">
-      <Sider breakpoint="sm" collapsible>
+      <Sider breakpoint="sm" collapsible 
+      onCollapse={ collapsed => toggleSiderMenu(collapsed) }>
         <SiderMenu />
       </Sider>
       <Layout>
@@ -28,4 +33,16 @@ const App = () => (
   </Layout>
 );
 
-export default App;
+const mapStateToProps = state => ({
+  isCollapsed: state.layout.isCollapsed
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ toggleSiderMenu }, dispatch);
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(App)
+);
