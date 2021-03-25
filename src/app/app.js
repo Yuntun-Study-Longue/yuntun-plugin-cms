@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { withRouter } from "react-router";
-import { Layout, Icon } from 'antd'
+import { Layout, Icon, Button } from 'antd'
 import SiderMenu from './SiderMenu'
 import Routes from "./routes";
 import { toggleSiderMenu } from "../modules/layout";
@@ -10,7 +10,7 @@ import './app.css';
 
 const { Sider, Content, Header } = Layout
 
-const App = ({ toggleSiderMenu }) => (
+const App = ({ toggleSiderMenu, history }) => (
   <Layout className="app">
     <Header className="app__header">
       <h2 className="app__logo">
