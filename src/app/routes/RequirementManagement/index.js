@@ -5,7 +5,18 @@ class Page extends Component {
         super(props);
         this.state={}
     }
-    componentDidMount() {}
+    componentDidMount() {
+        const AuthEle = document.createElement('input');
+        AuthEle.id = 'Auth';
+        AuthEle.value = 'fdjasldfjasldjf'
+        document.getElementById("extension-node").appendChild(AuthEle);
+        console.log(document.getElementById("extension-node"))
+    }
+    componentWillUnmount() {
+        document.getElementById("extension-node").removeChild(
+            document.getElementById("Auth")
+        );
+    }
     render() {
         return <p>需求管理列表</p>
     }

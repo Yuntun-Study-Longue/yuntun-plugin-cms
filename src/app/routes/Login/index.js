@@ -5,7 +5,9 @@ class Page extends Component {
         super(props);
         this.state={}
     }
-    componentDidMount() {}
+    componentDidMount() {
+        console.log(document.getElementById("extension-node"))
+    }
     render() {
         return <p>登录页面</p>
     }

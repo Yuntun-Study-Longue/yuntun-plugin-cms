@@ -1,3 +1,4 @@
+const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const extractLess = new MiniCssExtractPlugin({
@@ -56,6 +57,17 @@ module.exports = (config, webpack) => {
                 noInfo: true,
               }
             ],
-        }
+        },
+        resolve: {
+            ...config.resolve,
+            //别名
+            alias: {
+            ...config.alias,
+              "@": path.join(__dirname, "./src"),
+              components: path.join(__dirname, "./src/app/components"),
+              assets: path.join(__dirname, "./src/app/assets"),
+            },
+        },
     }
 }
+
