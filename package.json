@@ -20,8 +20,11 @@
     "react ^16.14.0"
   ],
   "dependencies": {
+    "antd": "^3.1.4",
     "axios": "^0.21.0",
     "browserify-rsa": "^4.1.0",
+    "classnames": "^2.2.6",
+    "connected-react-router": "^4.5.0",
     "d3": "^6.3.1",
     "d3-drag": "^2.0.0",
     "d3-force": "^2.1.1",
@@ -32,19 +35,19 @@
     "jsencrypt": "^3.0.0-rc.1",
     "node-forge": "^0.10.0",
     "prop-types": "^15.7.2",
+    "rc-resize-observer": "^1.0.0",
     "react": "16.14.0",
     "react-d3-graph": "^2.5.0",
     "react-dom": "16.14.0",
-    "react-orgchart": "^1.0.5",
-    "react-router-dom": "5.2.0",
-    "styled-theming": "^2.2.0",
     "react-frontload": "^1.0.3",
     "react-loadable": "^5.5.0",
-    "connected-react-router": "^4.5.0",
-    "redux": "^4.0.0",
+    "react-orgchart": "^1.0.5",
     "react-redux": "^5.0.7",
+    "react-router-dom": "5.2.0",
+    "react-window": "^1.8.6",
+    "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
-    "antd": "^3.1.4"
+    "styled-theming": "^2.2.0"
   },
   "devDependencies": {
     "@ant-design/icons": "^4.5.0",
