@@ -14,7 +14,7 @@ const App = ({ toggleSiderMenu, history }) => (
   <Layout className="app">
     <Header className="app__header">
       <h2 className="app__logo">
-        <Icon type="ant-design" /> IDP-Ant Design
+        {/* <Icon type="ant-design" /> IDP-Ant Design */}
       </h2>
     </Header>
 

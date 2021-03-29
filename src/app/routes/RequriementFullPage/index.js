@@ -164,7 +164,7 @@ class Page extends Component {
               columns={columns}
               dataSource={data}
               scroll={{
-                y: 300,
+                y: 450,
                 x: '100vw',
               }}
             />

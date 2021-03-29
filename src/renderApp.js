@@ -54,6 +54,7 @@ export const renderApp = async (request, h) => {
       </head>
       <body>
           <div id="root">${markup}</div>
+          <div id="extension-node"></div>
       </body>
     </html>`;
   
