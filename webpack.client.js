@@ -35,7 +35,17 @@ module.exports = (config, webpack) => {
                     modifyVars: antdTheme,
                     },
                 }],
-            }
+                },
+                {
+                test: /\.(scss|sass)$/,
+                sideEffects: true,
+                use: [
+                    {loader: MiniCssExtractPlugin.loader},
+                    'css-loader',
+                    'postcss-loader',
+                    'resolve-url-loader',
+                    'sass-loader',],
+                }
         ],
         },
         plugins: [
@@ -57,16 +67,6 @@ module.exports = (config, webpack) => {
                 noInfo: true,
               }
             ],
-        },
-        resolve: {
-            ...config.resolve,
-            //别名
-            alias: {
-            ...config.alias,
-              "@": path.join(__dirname, "./src"),
-              components: path.join(__dirname, "./src/app/components"),
-              assets: path.join(__dirname, "./src/app/assets"),
-            },
         },
     }
 }

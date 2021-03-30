@@ -1,0 +1,30 @@
+.logoHeader{
+    height: 100px;
+    background-color: #F0F3F8;
+    padding:30px 0 0 195px;
+    user-select: none;
+    span{
+        height: 25px;
+        margin-top: 11px;
+    }
+    .en-info{
+        padding-right: 10px;
+        border-right: 1px solid #D8D8D8;
+        line-height: 25px;
+        font-size: 30px;
+        font-weight: bold;
+        color:#005785;
+    }
+    .zh-info{
+        padding-left: 10px;
+        line-height: 25px;
+        font-size: 20px;
+        color:#666666;
+    }
+    .logoHeader-logo{
+        display: inline-block;
+        height: 36px;
+        width: 66px;
+        background: url(./img/logo.png) no-repeat;
+    }
+}

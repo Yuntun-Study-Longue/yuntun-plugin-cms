@@ -1,0 +1,36 @@
+.TbLayout-container{
+    height: 100%;
+    overflow: hidden;
+}
+.TbLayout-top,
+.TbLayout-bottom{
+    overflow: hidden;
+}
+.TbLayout-split{
+    height: 10px;
+    position: relative;
+    background-color: #F3F3F3;
+}
+.arrow-top,
+.arrow-bottom{
+    position: relative;
+    height: 10px;
+    width: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+.TbLayout-split:hover .arrow-bottom{
+    display: block;
+}
+.arrow-top{
+    display: block;
+    top:-9px;
+    background: url(./img/arrow-top.png) no-repeat center center;
+}
+.arrow-bottom{
+    display: none;
+    top:10px;
+    background: url(./img/arrow-bottom.png) no-repeat center center;
+}

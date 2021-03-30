@@ -1,0 +1,22 @@
+.ant-tabs{
+    height: 100%;
+}
+.ant-tabs-bar{
+    margin-bottom: 0;
+    padding-left:10px;
+    padding-top:10px;
+}
+.ant-tabs.ant-tabs-card>.ant-tabs-bar .ant-tabs-tab{
+    background-color: transparent;
+    border-color:transparent;
+}
+.ant-tabs.ant-tabs-card>.ant-tabs-bar .ant-tabs-tab-active{
+    background-color: #fff;
+    border-color:#d9d9d9;
+}
+.ant-tabs-content{
+    height: calc(100% - 46px);
+}
+.ant-tabs-tabpane{
+    height: 100%;
+}

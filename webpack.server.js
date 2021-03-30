@@ -1,8 +1,18 @@
-module.exports = (config, webpack) => ({
+module.exports = (config, webpack) => {
+  return {
     ...config,
     module: {
       ...config.module,
-      rules: [...config.module.rules],
+      rules: [
+        ...config.module.rules,
+        {
+          test: /\.(scss|sass)$/,
+          use: [
+            'css-loader',
+            'sass-loader'
+          ],
+        }
+      ],
     },
     plugins: [
       ...config.plugins,
@@ -10,4 +20,5 @@ module.exports = (config, webpack) => ({
         maxChunks: 1,
       }),
     ],
-})
+  }
+}

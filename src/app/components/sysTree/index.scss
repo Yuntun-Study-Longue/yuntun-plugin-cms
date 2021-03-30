@@ -1,0 +1,12 @@
+.sysTree{
+    height: 100%;
+    overflow: auto;
+    .ant-tree {
+        min-width: 200px;
+        li a{
+            width: calc(100% - 20px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

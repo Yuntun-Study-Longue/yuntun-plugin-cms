@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "baseUrl": "src",
+      "paths": {
+        "@": ["."],
+        "components": ["./app/components"],
+        "assets": ["./app/assets"],
+        "sub-antd": ["../node_modules/antd"]
+      }
+    }
+}

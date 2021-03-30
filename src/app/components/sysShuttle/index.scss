@@ -1,0 +1,33 @@
+.sys-shuttle{
+    height: 327px;
+    width: 100%;
+    .sys-table-wrap{
+        border:1px solid #e9e9e9;
+        border-radius: 5px 5px 0 0;
+    }
+    .sys-shuttle-left,.sys-shuttle-right{
+        height: 100%;
+        width: calc((100% - 80px)/2);
+    }
+    .tool-bar{
+        height: 40px;
+        line-height: 40px;
+    }
+    .sys-shuttle-center{
+        height: 100%;
+        padding-top: 40px;
+        width: 80px;
+        .sys-shuttle-operation{
+            width: 40px;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            .ant-btn{
+                width: 100%;
+                margin-top: 5px;
+                color:#999999;
+            }
+        }
+    }
+}

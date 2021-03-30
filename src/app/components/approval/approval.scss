@@ -1,0 +1,56 @@
+//送审页面样式
+.submit-approval-modal {
+    textarea.ant-input {
+        width: 376px;
+    }
+    .ant-input-count {
+        left: 343px;
+    }
+    .many-approval-check-step{
+        position: absolute;
+        top: -8px;
+    }
+    .many-approval-button-clear{
+        position: absolute !important;
+        top: 20px;
+        // right: 9px;
+    }
+    .many-approval-button-selectbut{
+        position: absolute !important;
+        top: 50px;
+        // right: -15px;
+    }
+    .tip{
+        font-size: 12px;
+        color: #999;
+        line-height: 18px;
+    }
+    .user-item .ant-select-selection--multiple {
+        height: 76px; 
+        overflow: auto;
+    }
+    .select-error .ant-select-selection--multiple {
+        height: 76px;
+        border-color: #e96149 !important;
+        box-shadow: 0 0 0 2px rgba(233, 97, 73, 0.2); 
+        overflow: auto;
+    }
+
+}
+
+.submit-approval-modal{
+    *, :after, :before{
+        box-sizing: border-box;
+    }
+}
+
+//送审--多人批量选择样式
+.batch-model {
+    .ant-modal-body{
+        max-height: 560px;
+        overflow: auto;
+    }
+    .left-section{
+        width: 190px !important;
+    }
+}

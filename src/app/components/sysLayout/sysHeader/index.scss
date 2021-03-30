@@ -1,0 +1,38 @@
+.header-wrap{
+    height:40px;
+    background-color: #005785;
+    color:#FFFFFF;
+    .header-left{
+        width:300px;
+        height: 16px;
+        margin:12px 0 0 20px;
+        .header-logo{
+            width: 34px;
+            height: 16px;
+            background: url(./img/icon-logo.png) no-repeat center center;
+            background-size: cover;
+        }
+        .header-split{
+            width: 1px;
+            height: 16px;
+            margin: 0 5px;
+            background: linear-gradient(0deg, #E5E5E5, #FFFFFF);
+            opacity: .8;
+        }
+        .header-title{
+            height: 16px;
+            line-height: 16px;
+            margin-left: 10px;
+        }
+    }
+    .header-user{
+        margin: 12px 20px 0 0;
+        height: 16px;
+        line-height: 16px;
+    }
+    .header-search{
+        margin: 5px 10px 0 0;
+        width: 180px;
+        height:32px;
+    }
+}

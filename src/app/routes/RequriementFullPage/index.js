@@ -4,6 +4,9 @@ import { VariableSizeGrid as Grid } from 'react-window';
 import ResizeObserver from 'rc-resize-observer';
 import classNames from 'classnames';
 import { Table } from 'antd';
+import SysIcon from 'components/sysIcon';
+import SysModal from 'components/sysModal';
+import Button from 'sub-antd/lib/button'
 
 function VirtualTable(props) {
   const { columns, scroll } = props;
@@ -80,8 +83,9 @@ function VirtualTable(props) {
   };
   return (
     <ResizeObserver
-      onResize={({ width }) => {
+      onResize={({ width, height }) => {
         setTableWidth(width);
+        console.log(height, '=== onResize height')
       }}
     >
       <Table
@@ -149,7 +153,7 @@ class Page extends Component {
 
 
     componentDidMount() {
-    
+      
     }
     render() {
         return <div>
@@ -160,6 +164,8 @@ class Page extends Component {
                 `该页面状态未保存，确定离开前往 ${location.pathname}吗？`
                 }
             />
+            <SysIcon name='save' />
+            <Button>点击</Button>
             <VirtualTable
               columns={columns}
               dataSource={data}

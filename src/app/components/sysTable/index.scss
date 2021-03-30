@@ -1,0 +1,49 @@
+//表格样式调整
+.sys-table-wrap{
+    height: calc(100% - 40px);
+    line-height: 20px;
+}
+.sys-table{
+    &>div{
+        height: 100%;
+        &>div{
+            height: 100%;
+            .ant-spin-container{
+                height: 100%;
+                .ant-table{
+                    height: 100%;
+                    .ant-table-content{
+                        height: 100%;
+                        .ant-table-scroll{
+                            height: 100%;
+                            overflow: hidden;
+                            //ie兼容无height时max/min-height计算错误问题
+                            .ant-table-body{
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ant-table-tbody>tr>td, .ant-table-thead>tr>th,
+    .ant-table-tbody>tr>td .ant-table-row-nowrap, 
+    .ant-table-thead>tr>th .ant-table-row-nowrap{
+        padding: 10px;
+    }
+    .ant-table-tbody>tr>td.ant-table-selection-column, 
+    .ant-table-thead>tr>th.ant-table-selection-column{
+        width: 40px;
+    }
+}
+.sys-table-pagination{
+    padding:10px;
+    border-top: 1px solid #e9e9e9;
+    .ant-pagination{
+        min-width: 1000px;
+        &>li{
+            float: left;
+        }
+    }
+}

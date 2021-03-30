@@ -29,7 +29,6 @@ export const renderApp = async (request, h) => {
             </Loadable.Capture>
         )
     )
-  
     const html =
       // prettier-ignore
       `<!doctype html>

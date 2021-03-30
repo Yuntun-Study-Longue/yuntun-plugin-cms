@@ -1,0 +1,44 @@
+
+.demand-management-base-info{
+    font-size: 12px;
+    overflow-y: auto;
+    background-color: #f7f7f7;
+    height:100%;
+    ul{ 
+        li{
+            line-height: 24px;
+            color: #666;
+            border-bottom: 1px #fff solid;
+            display: table;
+            width:100%;
+            .name{
+                display: table-cell;
+                vertical-align: middle;
+                width:15%;
+                text-align: right;
+                background-color: #F0F3FD;
+                padding: 8px 0;
+                box-sizing: border-box;
+            }
+            .content{
+                display: table-cell;
+                vertical-align: middle;
+                width: 35%;
+                padding: 8px 5px;
+                box-sizing: border-box;
+                word-break:break-all; 
+                word-wrap:break-word;
+            }
+            .form-required{
+                position: relative;
+                top:2px;
+                color:red;
+                font-style: normal;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+.ellips-describe {
+    word-break: break-word
+}

@@ -1,0 +1,86 @@
+.clearfix:after,.clearfix:before{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;
+}
+
+.opeation-icon{
+    // padding:5px 5px 5px 10px;
+    // background: #f7f7f7;
+    // height: 26px;
+    .icon{
+      display: inline-block;
+      width: 16px;
+      height:16px;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+      background-position: left center;
+      cursor: pointer;
+    }
+    .icon-down{
+      width:26px;
+      text-align: right;
+      margin-right: 4px;
+      i{
+        font-size: 12px;
+        transform: scale(.5);
+        color: #666;
+        position: relative;
+        top: -3px;
+      }
+    } 
+    .icon-move-up{
+      background-image: url('./img/tool/move-up.png');
+    }
+    .icon-move-down{
+      background-image: url('./img/tool/move-down.png');
+    }
+    .sys-btn{
+      margin-top: 0 !important;
+    }
+}
+.ant-search-input.ant-input-group .ant-input:first-child, .ant-search-input.ant-input-group .ant-select:first-child{
+  height: 28px !important;
+}
+.sys-transfer{
+    height: 383px;
+    width: 90%;
+    margin:0 auto;
+    .sys-transfer-left,
+    .sys-transfer-right{
+        height: 100%;
+        width: calc((100% - 100px)/2);
+        border: 1px solid #e9e9e9;
+        border-radius: 5px 5px 0 0;
+    }
+    .tool-bar{
+        height: 40px;
+        line-height: 40px;
+        width: calc((100% - 100px)/2);
+        font-size: 14px;
+    }
+    .sys-transfer-center{
+        height: 100%;
+        width: 100px;
+        .sys-transfer-operation{
+            width: 85px;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            .ant-btn{
+                width: 100%;
+                margin-top: 10px;
+                color:#999999;
+            }
+        }
+    }
+    .sysToolBar{
+        border-bottom: none;
+    }
+}
