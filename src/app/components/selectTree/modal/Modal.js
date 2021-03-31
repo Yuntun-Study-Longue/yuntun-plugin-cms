@@ -3,7 +3,7 @@ import axios from "axios";
 
 import Cookies from "js-cookie";
 import Modal from "sub-antd/lib/modal";
-import Form from "sub-antd/lib/form";
+import Form from 'sub-antd/lib/form';
 import Input from "sub-antd/lib/input";
 import {twoColLayout} from "components/layout/formLayout";
 import Button from "sub-antd/lib/button";

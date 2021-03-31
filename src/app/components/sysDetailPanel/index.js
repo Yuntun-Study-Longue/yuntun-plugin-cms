@@ -53,7 +53,7 @@ class SysDetailPanel extends Component {
     }
     importComp(path){
         return Loadable({
-            loader: () => import(`pages/system/${path}`),// eslint-disable-line
+            loader: () => import(`pages/${path}`),// eslint-disable-line
             loading:Loading
         });
     }

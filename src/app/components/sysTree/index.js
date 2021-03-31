@@ -30,10 +30,10 @@ class SysTree extends Component {
         axios.get(this.props.dataUrl).then(res=>{
             if(!res.data.code || res.data.code === 200){
                 //转换数据格式treeDataMap
-                this.treeDataMap = this.getTreeDataMap(res.data.data);
+                this.treeDataMap = this.getTreeDataMap(res.data.data || []);
                 defaultKeys = defaultKeys.filter(id=>this.treeDataMap[id])
                 this.setState({
-                    treeData:res.data.data,
+                    treeData:res.data.data || [],
                     selectedKeys:defaultKeys,
                     expandedKeys:this.getDefaultExpandedKeys(defaultKeys)
                 },()=>{
@@ -179,9 +179,8 @@ class SysTree extends Component {
                     autoExpandParent={this.state.autoExpandParent}
                     onSelect={this.onSelect}
                     selectedKeys={this.state.selectedKeys}
-                >
-                    {loop(this.state.treeData)}
-                </Tree>
+                    treeData={loop(this.state.treeData)}
+                />
             </div>
         );
     }

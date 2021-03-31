@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Form from "sub-antd/lib/form";
+import Form from 'sub-antd/lib/form';
 import Input from "sub-antd/lib/input";
 import Checkbox from "sub-antd/lib/checkbox";
 import Select from "sub-antd/lib/select";

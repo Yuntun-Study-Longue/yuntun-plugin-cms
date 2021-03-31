@@ -41,37 +41,37 @@
     }
 
     .root a{
-      background-image: url('../../../../assets/images/system/tree/root.png');
+      background-image: url('assets/images/system/tree/root.png');
     }
     .unsaved > a{
-      background-image: url('../../../../assets/images/system/tree/saved.png');
+      background-image: url('assets/images/system/tree/saved.png');
     }
     .based > a{
-      background-image: url('../../../../assets/images/system/tree/inForce.png') !important;
+      background-image: url('assets/images/system/tree/inForce.png') !important;
     }
     .saved > a{
-      background-image: url('../../../../assets/images/system/tree/saved.png');
+      background-image: url('assets/images/system/tree/saved.png');
     }
     .deleted > a {
-      background-image: url('../../../../assets/images/system/tree/unsaved.png') !important;
+      background-image: url('assets/images/system/tree/unsaved.png') !important;
     }
 
     // .saved a{
-    //   background-image: url('../../../../assets/images/system/tree/unsaved.png');
+    //   background-image: url('assets/images/system/tree/unsaved.png');
     // }
     // .unsaved a{
-    //   background-image: url('../../../../assets/images/system/tree/saved.png');
+    //   background-image: url('assets/images/system/tree/saved.png');
     // }
     // .inForce a{
-    //   background-image: url('../../../../assets/images/system/tree/inForce.png');
+    //   background-image: url('assets/images/system/tree/inForce.png');
     // }
 
     //项目和文件夹
     .PROJECT a{
-      background-image: url('../../../../assets/images/system/tree/project.png');
+      background-image: url('assets/images/system/tree/project.png');
     }
     .FOLDER a{
-      background-image: url('../../../../assets/images/system/tree/folder.png');
+      background-image: url('assets/images/system/tree/folder.png');
     }
 }
 .right-content{

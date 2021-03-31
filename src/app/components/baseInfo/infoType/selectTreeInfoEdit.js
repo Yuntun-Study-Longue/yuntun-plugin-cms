@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Form from "sub-antd/lib/form";
+import Form from 'sub-antd/lib/form';
 import Input from "sub-antd/lib/input";
 import {halfFourColLayout,fourColLayout} from "components/layout/formLayout";
 import message from "sub-antd/lib/message";

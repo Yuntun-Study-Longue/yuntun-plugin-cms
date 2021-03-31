@@ -7,6 +7,7 @@ import SiderMenu from './SiderMenu'
 import Routes from "./routes";
 import { toggleSiderMenu } from "../modules/layout";
 import './app.css';
+import '@ant-design/compatible/assets/index.css'
 
 const { Sider, Content, Header } = Layout
 

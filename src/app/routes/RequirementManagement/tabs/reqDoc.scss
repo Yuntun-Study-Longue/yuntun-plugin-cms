@@ -1,0 +1,46 @@
+.reqDoc{
+ position: relative;
+ .reqDoc_span{
+    position: absolute;
+    right:5px;
+    display: none;
+    top: 0;
+   }
+    
+}
+.reqDoc:hover { 
+    .reqDoc_span{   
+        position: absolute;
+        right:5px;
+        display: block;
+        top: 0;
+    }
+}
+
+.ant-table-tbody > tr > td .ant-table-row-nowrap > :last-child, .ant-table-thead > tr > th .ant-table-row-nowrap > :last-child span{
+  display: inline-block;
+  width: 100%;
+
+}
+.ant-tooltip-inner{
+  max-width: 410px !important;
+}
+
+.guideLineBox{
+    width: 900px;
+    min-height: 315px;
+    overflow: hidden;
+     .guideLineBox-left{
+      width: 180px; 
+      padding-left: 19px,;
+      padding-top: 27px; 
+      float: left;
+      color: #005785
+    }
+    .guideLineBox-right{
+      width: 720px;
+      float: left;
+      min-height: 315px;
+      border-left: 1px solid #D8D8D8
+    }
+}
