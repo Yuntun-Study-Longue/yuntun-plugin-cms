@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Row from 'sub-antd/lib/row';
 import Col from 'sub-antd/lib/col';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import axios from 'axios';
 import Input from 'sub-antd/lib/input';
 import Table from 'sub-antd/lib/table';

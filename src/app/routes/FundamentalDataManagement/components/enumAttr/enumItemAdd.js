@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 const FormItem = Form.Item;
 import Input from 'sub-antd/lib/input';
 import {halfFourColLayout,fourColLayout,twoColLayout} from "components/layout/formLayout";
@@ -36,5 +36,5 @@ export class EnumItemAdd extends Component {
         )
     }
 }
-EnumItemAdd = Form.create()(EnumItemAdd);
+// EnumItemAdd = Form.create()(EnumItemAdd);
 export default EnumItemAdd

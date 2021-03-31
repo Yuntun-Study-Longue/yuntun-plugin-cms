@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from "axios";
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 const FormItem = Form.Item;
 import Select from 'sub-antd/lib/select';
 import SysMemberSelect from 'components/sysMemberSelect'
@@ -82,5 +82,5 @@ class PermissionsAdd extends Component {
         )
     }
 }
-PermissionsAdd = Form.create()(PermissionsAdd);
+// PermissionsAdd = Form.create()(PermissionsAdd);
 export default PermissionsAdd

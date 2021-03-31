@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import Select from 'sub-antd/lib/select';
 import {halfFourColLayout,fourColLayout,twoColLayout} from "components/layout/formLayout";
@@ -15,7 +15,7 @@ export class EnumItemAdd extends Component {
             docType:[]
         }
     }
-    componentWillMount(){
+    UNSAFE_componentWillMount(){
         const Authorization = Cookies.get('Authorization');
         axios.get(`/sysware/api/se/basicdata/loadBypid?pid=0&code=611_ORM`, { headers: { 'Authorization': Authorization}}).then(res => {
             let data=res.data.data.resultSet || res.data.data || [];
@@ -58,5 +58,5 @@ export class EnumItemAdd extends Component {
         )
     }
 }
-EnumItemAdd = Form.create()(EnumItemAdd);
+// EnumItemAdd = Form.create()(EnumItemAdd);
 export default EnumItemAdd

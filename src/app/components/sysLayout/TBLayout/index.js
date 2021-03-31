@@ -11,7 +11,7 @@ class TbLayout extends Component {
                 : undefined,
         };
     }
-    componentWillReceiveProps(nextProps, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProps, nextState) {
         this.props.hideBottom!== nextProps.hideBottom
         && this.toggleShow(!nextProps.hideBottom)
     }
@@ -95,7 +95,7 @@ class TbLayout extends Component {
             <div
                 className="TbLayout-container"
                 ref={(el) => (this.$container = el)}
-                style={{...this.props.style?this.props.style:{}}}
+                style={{...(this.props.style ? this.props.style : {})}}
             >
                 {/* 上侧面板 */}
                 <div

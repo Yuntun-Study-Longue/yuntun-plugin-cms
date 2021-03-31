@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Row from 'sub-antd/lib/row';
 import Col from 'sub-antd/lib/col';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import {twoColLayout, fourColLayout, halfFourColLayout, halfFourColLayoutFn, fourColLayoutFn, twoColLayoutFn} from "components/layout/formLayout";
 import TreeSelect from 'sub-antd/lib/tree-select';
 import axios from 'axios';
@@ -56,7 +56,7 @@ class ColumnSetting extends Component {
             targetSource: [], //显示列数据
         };
     }
-    componentWillReceiveProps(nextProp, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProp, nextState) {
         if (this.props.viewId !== nextProp.viewId) {
             this.setState({ viewId: nextProp.viewId })
         }
@@ -300,6 +300,6 @@ class ColumnSetting extends Component {
     }
 }
 
-ColumnSetting = Form.create()(ColumnSetting)
+// ColumnSetting = Form.create()(ColumnSetting)
 
 export default ColumnSetting

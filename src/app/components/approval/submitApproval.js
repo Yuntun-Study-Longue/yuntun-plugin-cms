@@ -11,7 +11,7 @@ import axios from "axios";
 
 import message from 'sub-antd/lib/message';
 import Modal from 'sub-antd/lib/modal';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import Select from 'sub-antd/lib/select';
 import Upload from 'sub-antd/lib/upload';

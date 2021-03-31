@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import { type, scope, changeitem, selectType, createhistory } from '../constants/enumtype';
 import {halfFourColLayout,fourColLayout} from "components/layout/formLayout";
 const FormItem = Form.Item;

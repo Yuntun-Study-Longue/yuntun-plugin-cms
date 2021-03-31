@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import Checkbox from 'sub-antd/lib/checkbox';
 import Radio from 'sub-antd/lib/radio';
@@ -106,6 +106,6 @@ class OtherInfoEdit extends Component {
         )
     }
 }
-OtherInfoEdit = Form.create()(OtherInfoEdit);
+// OtherInfoEdit = Form.create()(OtherInfoEdit);
 
 export default OtherInfoEdit

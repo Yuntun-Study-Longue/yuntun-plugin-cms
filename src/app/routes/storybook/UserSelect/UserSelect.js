@@ -1,6 +1,6 @@
 "use strict";
 import React, { Component } from 'react';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import {twoColLayout, fourColLayout, halfFourColLayout, halfFourColLayoutFn, fourColLayoutFn, twoColLayoutFn} from "components/layout/formLayout";
 import TreeSelect from 'sub-antd/lib/tree-select';
 import Select from 'sub-antd/lib/select';

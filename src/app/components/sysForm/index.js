@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Form from 'sub-antd/lib/form'
+import { Form } from 'antd';
 const FormItem = Form.Item;
 function SysForm (props){
     const children = props.children.length?props.children:[props.children];

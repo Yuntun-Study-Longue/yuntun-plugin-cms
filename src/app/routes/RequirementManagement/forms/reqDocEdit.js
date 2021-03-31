@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios'
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 const FormItem = Form.Item;
 import Input from 'sub-antd/lib/input';
 import DatePicker from 'sub-antd/lib/date-picker';
@@ -221,5 +221,5 @@ class ReqDocEdit extends Component {
         )
     }
 }
-ReqDocEdit = Form.create()(ReqDocEdit);
+// ReqDocEdit = Form.create()(ReqDocEdit);
 export default ReqDocEdit

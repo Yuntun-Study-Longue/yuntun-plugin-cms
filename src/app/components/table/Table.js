@@ -37,7 +37,7 @@ export default class SyswareTable extends Component {
           $(".demand-file-table .ant-table-body").css("minHeight", this.props.tableH-33+'px');
         }, 30);
       }
-      componentWillReceiveProps(nextProps) {
+      UNSAFE_componentWillReceiveProps(nextProps) {
         if (this.props.shouldRefreshTable != nextProps.shouldRefreshTable) {
           this.getList(1,nextProps.selectTreeId);
         }

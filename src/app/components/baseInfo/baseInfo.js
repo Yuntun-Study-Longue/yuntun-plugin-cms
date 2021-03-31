@@ -13,7 +13,7 @@ export default class BaseInfo extends Component {
             mode: 'plain'
         }
     }
-    componentWillReceiveProps(nextProp, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProp, nextState) {
        JSON.stringify(this.props.baseData)  !== JSON.stringify(nextProp.baseData) && this.setState({ mode: 'plain', baseData: nextProp.baseData})
     }
     render() {

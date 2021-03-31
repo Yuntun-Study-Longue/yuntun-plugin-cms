@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 const FormItem = Form.Item;
 import {twoColLayout} from "components/layout/formLayout";
@@ -57,5 +57,5 @@ class DocTypeAdd extends Component {
         )
     }
 }
-DocTypeAdd = Form.create()(DocTypeAdd);
+// DocTypeAdd = Form.create()(DocTypeAdd);
 export default DocTypeAdd

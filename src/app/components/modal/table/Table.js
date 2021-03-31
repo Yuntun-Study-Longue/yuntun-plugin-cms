@@ -22,7 +22,7 @@ export default class ModalTable extends Component {
             // isEnumChanged: false,
         }
     }
-    componentWillReceiveProps(nextProps, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProps, nextState) {
         if (JSON.stringify(this.props.initialValue) !== JSON.stringify(nextProps.initialValue)) {
             this.setState({ orgExtends: nextProps.initialValue });
         }

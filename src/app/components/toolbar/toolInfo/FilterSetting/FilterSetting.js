@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import {twoColLayout, fourColLayout, halfFourColLayout, halfFourColLayoutFn, fourColLayoutFn, twoColLayoutFn, noLabelColLayout, noLabelColLayoutFn} from "components/layout/formLayout";
 import TreeSelect from 'sub-antd/lib/tree-select';
 import axios from 'axios';
@@ -62,7 +62,7 @@ class FilterSetting extends Component {
         this.props.onRef && this.props.onRef(this);
         this.initCondition()
     }
-    componentWillReceiveProps(nextProps, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProps, nextState) {
         if (nextProps.shouldResetFilter) {
             this.resetCondition(() => this.props.resetFilterSetting(false))
             
@@ -230,5 +230,5 @@ class FilterSetting extends Component {
         )
     }
 }
-FilterSetting = Form.create()(FilterSetting)
+// FilterSetting = Form.create()(FilterSetting)
 export default FilterSetting

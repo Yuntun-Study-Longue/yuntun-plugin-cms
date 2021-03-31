@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import ModalTable from 'components/modal/table/Table';
 import axios from 'axios';
 import Cookies from 'js-cookie';
@@ -16,7 +16,7 @@ export default class EnumInfo extends Component {
     componentDidMount() {
         this.fetchDetail(this.props.baseData.id);
     }
-    componentWillReceiveProps(nextProp, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProp, nextState) {
         this.props.baseData.id !== nextProp.baseData.id && this.fetchDetail(nextProp.baseData.id)
     }
     fetchDetail(id) {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 const FormItem = Form.Item;
 import {halfFourColLayout,fourColLayout,halfFourColLayoutFn,fourColLayoutFn} from "components/sysLayout/formLayout";
 

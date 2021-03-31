@@ -3,7 +3,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import message from 'sub-antd/lib/message';
 import Modal from 'sub-antd/lib/modal';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import Button from 'sub-antd/lib/button';
 import Select from 'sub-antd/lib/select';
@@ -66,6 +66,6 @@ class ModalDocument extends Component {
         )
     }
 }
-ModalDocument = Form.create()(ModalDocument);
+// ModalDocument = Form.create()(ModalDocument);
 
 export default ModalDocument;

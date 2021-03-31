@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from "sub-antd/lib/input";
 const FormItem = Form.Item;
 import {halfFourColLayout,fourColLayout} from "components/sysLayout/formLayout";
@@ -73,6 +73,6 @@ class SelectTreeInfoEdit extends Component {
         );
     }
 }
-SelectTreeInfoEdit = Form.create()(SelectTreeInfoEdit);
+// SelectTreeInfoEdit = Form.create()(SelectTreeInfoEdit);
 
 export default SelectTreeInfoEdit;

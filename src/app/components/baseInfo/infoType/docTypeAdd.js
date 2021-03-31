@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import Checkbox from 'sub-antd/lib/checkbox';
 import Select from 'sub-antd/lib/select';
@@ -83,6 +83,6 @@ class DocTypeAdd extends Component {
         )
     }
 }
-DocTypeAdd = Form.create()(DocTypeAdd);
+// DocTypeAdd = Form.create()(DocTypeAdd);
 
 export default DocTypeAdd

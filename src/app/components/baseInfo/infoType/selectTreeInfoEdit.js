@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from "sub-antd/lib/input";
 import {halfFourColLayout,fourColLayout} from "components/layout/formLayout";
 import message from "sub-antd/lib/message";
@@ -105,6 +105,6 @@ class SelectTreeInfoEdit extends Component {
         );
     }
 }
-SelectTreeInfoEdit = Form.create()(SelectTreeInfoEdit);
+// SelectTreeInfoEdit = Form.create()(SelectTreeInfoEdit);
 
 export default SelectTreeInfoEdit;

@@ -113,5 +113,5 @@ class SetBasicInfo extends Component {
         )
     }
 }
-SetBasicInfo = SysForm.create()(SetBasicInfo);
+// SetBasicInfo = SysForm.create()(SetBasicInfo);
 export default SetBasicInfo

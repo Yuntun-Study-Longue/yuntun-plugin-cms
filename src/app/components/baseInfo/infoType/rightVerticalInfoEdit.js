@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import Checkbox from 'sub-antd/lib/checkbox';
 import Radio from 'sub-antd/lib/radio';
@@ -192,6 +192,6 @@ class RightVerticalInfoEdit extends Component {
         </div>
     }
 }
-RightVerticalInfoEdit = Form.create()(RightVerticalInfoEdit);
+// RightVerticalInfoEdit = Form.create()(RightVerticalInfoEdit);
 
 export default RightVerticalInfoEdit

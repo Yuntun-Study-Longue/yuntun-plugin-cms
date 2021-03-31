@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import { Table } from 'antd';
 import SysIcon from 'components/sysIcon';
 import SysModal from 'components/sysModal';
-const Button = require('sub-antd/lib/button') 
+import Button from 'sub-antd/lib/button'; 
 
 function VirtualTable(props) {
   const { columns, scroll } = props;
@@ -165,7 +165,7 @@ class Page extends Component {
                 }
             />
             <SysIcon name='save' />
-            {/* <Button>点击</Button> */}
+            <Button>点击</Button>
             <VirtualTable
               columns={columns}
               dataSource={data}

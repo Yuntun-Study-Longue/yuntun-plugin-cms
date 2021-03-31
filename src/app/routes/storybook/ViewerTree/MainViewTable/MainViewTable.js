@@ -3,7 +3,7 @@ import Table from 'sub-antd/lib/table';
 import DropDownTool from 'components/toolbar/DropDownTool/DropDownTool';
 import {halfFourColLayout,fourColLayout,fourColLayoutFn} from "components/layout/formLayout";
 import Menu from 'sub-antd/lib/menu';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import Select from 'sub-antd/lib/select';
 import Tooltip from 'sub-antd/lib/tooltip';
@@ -51,7 +51,7 @@ class MainViewTable extends Component {
             timer: null,
         }
     }
-    componentWillReceiveProps(nextProps, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProps, nextState) {
       if (JSON.stringify(this.state.columns) !== JSON.stringify(nextState.columns) ) {
         this.getCalculateTableW();
       }
@@ -370,7 +370,7 @@ class MainViewTable extends Component {
         return prev += ~~(next.width.replace('px', '')); 
       }, 0)})
     }
-    componentWillReceiveProps(nextProp, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProp, nextState) {
       if (JSON.stringify(this.props.viewAttrRela) !== JSON.stringify(nextProp.viewAttrRela)) {
         this.generateColumns(nextProp)
       }
@@ -587,5 +587,5 @@ class MainViewTable extends Component {
         </div>
     }
 }
-MainViewTable = Form.create()(MainViewTable)
+// MainViewTable = Form.create()(MainViewTable)
 export default MainViewTable

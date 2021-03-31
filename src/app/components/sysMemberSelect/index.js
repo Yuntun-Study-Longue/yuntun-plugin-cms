@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import qs from 'querystring'
-import Form from 'sub-antd/lib/form'
+import { Form } from 'antd'
 const FormItem = Form.Item
 import Input from 'sub-antd/lib/input'
 import Select from 'sub-antd/lib/select'

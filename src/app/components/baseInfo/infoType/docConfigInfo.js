@@ -4,7 +4,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import { type, scope, changeitem, selectType, createhistory,extendType } from '../constants/enumtype';
 import {halfFourColLayout,fourColLayout,halfFourColLayoutFn,fourColLayoutFn} from "components/layout/formLayout";
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 const FormItem = Form.Item;
 
 export default class EnumInfo extends Component {
@@ -17,7 +17,7 @@ export default class EnumInfo extends Component {
     componentDidMount() {
         this.fetchDetail(this.props.baseData.id);
     }
-    componentWillReceiveProps(nextProp, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProp, nextState) {
         this.props.baseData.id !== nextProp.baseData.id && this.fetchDetail(nextProp.baseData.id)
     }
     fetchDetail(id) {

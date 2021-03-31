@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import Radio from 'sub-antd/lib/radio';
 import Cookies from 'js-cookie';
@@ -62,5 +62,5 @@ export class EnumItemEdit extends Component {
         )
     }
 }
-EnumItemEdit = Form.create()(EnumItemEdit);
+// EnumItemEdit = Form.create()(EnumItemEdit);
 export default EnumItemEdit

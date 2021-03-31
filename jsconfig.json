@@ -6,7 +6,8 @@
         "components": ["./app/components"],
         "assets": ["./app/assets"],
         "pages": ["./app/routes"],
-        "sub-antd": ["../node_modules/sub-antd"]
+        "sub-antd": ["../node_modules/antd"],
+        "sub-antd/lib/form": ["../node_modules/@ant-design/compatible"]
       }
     }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import Radio from 'sub-antd/lib/radio';
 import {twoColLayout} from "components/layout/formLayout";
@@ -82,6 +82,6 @@ class DocTypeEdit extends Component {
         )
     }
 }
-DocTypeEdit = Form.create()(DocTypeEdit);
+// DocTypeEdit = Form.create()(DocTypeEdit);
 
 export default DocTypeEdit

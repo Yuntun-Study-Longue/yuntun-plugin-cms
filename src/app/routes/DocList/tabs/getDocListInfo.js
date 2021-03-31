@@ -6,7 +6,7 @@ import SysButton from 'components/sysButton'
 import { halfFourColLayout, fourColLayout } from "components/layout/formLayout";
 import qs from 'querystring';
 import columns from '../columns/docList'
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import Modal from 'sub-antd/lib/modal';
 const FormItem = Form.Item;
@@ -289,6 +289,6 @@ class GetDocListInfo extends Component {
     }
 }
 
-GetDocListInfo = Form.create()(GetDocListInfo);
+// GetDocListInfo = Form.create()(GetDocListInfo);
 
 export default GetDocListInfo

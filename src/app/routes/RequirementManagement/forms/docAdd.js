@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import { halfFourColLayout, fourColLayout } from "components/layout/formLayout";
 import SysForm from 'components/sysForm'
@@ -74,5 +74,5 @@ export class DocAdd extends Component {
         )
     }
 }
-DocAdd = SysForm.create()(DocAdd);
+// DocAdd = SysForm.create()(DocAdd);
 export default DocAdd

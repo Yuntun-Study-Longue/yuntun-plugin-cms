@@ -18,7 +18,7 @@ export default class Layout extends React.Component {
         }
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
 
         let wh = this.getWinHeight();
         

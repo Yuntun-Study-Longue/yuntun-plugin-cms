@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ModalTable from 'components/modal/table/Table';
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import Checkbox from 'sub-antd/lib/checkbox';
 import Select from 'sub-antd/lib/select';
@@ -28,7 +28,7 @@ class EnumInfoEdit extends Component {
         this.props.onRef && this.props.onRef(this);
         this.fetchDetail(this.props.baseData.id);
     }
-    componentWillReceiveProps(nextProp, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProp, nextState) {
         this.props.baseData.id !== nextProp.baseData.id && this.fetchDetail(nextProp.baseData.id)
         console.log(this.props.baseData)
     }
@@ -246,6 +246,6 @@ class EnumInfoEdit extends Component {
 }
 
 
-EnumInfoEdit = Form.create()(EnumInfoEdit);
+// EnumInfoEdit = Form.create()(EnumInfoEdit);
 
 export default EnumInfoEdit

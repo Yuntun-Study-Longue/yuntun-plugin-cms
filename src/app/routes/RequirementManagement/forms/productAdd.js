@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import {twoColLayout, fourColLayout, halfFourColLayout, halfFourColLayoutFn, fourColLayoutFn, twoColLayoutFn} from "components/layout/formLayout";
 import {required,max,dmax} from 'components/sysForm/sysRules'
@@ -41,5 +41,5 @@ class ProductAdd extends Component {
         )
     }
 }
-ProductAdd = Form.create()(ProductAdd);
+// ProductAdd = Form.create()(ProductAdd);
 export default ProductAdd

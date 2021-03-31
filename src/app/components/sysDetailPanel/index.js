@@ -20,7 +20,7 @@ class SysDetailPanel extends Component {
     componentDidMount() {
         this.fetchDetail(this.props.detailUrl);
     }
-    componentWillReceiveProps(nextProp, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProp, nextState) {
         this.props.detailUrl !== nextProp.detailUrl
         && this.fetchDetail(nextProp.detailUrl)
     }

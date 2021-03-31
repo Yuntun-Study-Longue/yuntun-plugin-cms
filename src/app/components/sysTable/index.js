@@ -25,7 +25,7 @@ class SysTable extends Component {
     shouldComponentUpdate(nextProp, nextState){
         return JSON.stringify(this.state) !== JSON.stringify(nextState)
     }
-    componentWillReceiveProps(nextProps, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProps, nextState) {
         nextProps.dataUrl && this.props.dataUrl!== nextProps.dataUrl
         && this.setState({dataUrl:nextProps.dataUrl},()=>this.load());
         nextProps.dataSource && JSON.stringify(this.props.dataSource) !== JSON.stringify(nextProps.dataSource)

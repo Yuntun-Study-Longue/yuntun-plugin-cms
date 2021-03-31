@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import ModalTable from 'components/modal/table/Table';
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import Checkbox from 'sub-antd/lib/checkbox';
 import Radio from 'sub-antd/lib/radio';
@@ -261,5 +261,5 @@ class ReqExtensionEdit extends Component {
         );
     }
 }
-ReqExtensionEdit = Form.create()(ReqExtensionEdit);
+// ReqExtensionEdit = Form.create()(ReqExtensionEdit);
 export default ReqExtensionEdit

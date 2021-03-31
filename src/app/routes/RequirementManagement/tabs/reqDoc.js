@@ -51,7 +51,7 @@ class ReqDoc extends Component {
         }
         this.setBaseInfoData = {}
     }
-    componentWillReceiveProps(nextProps, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProps, nextState) {
         this.props.selectId !== nextProps.selectId
             && this.setState({ selectId: nextProps.selectId })
     }

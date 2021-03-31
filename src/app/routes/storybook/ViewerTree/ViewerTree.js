@@ -49,7 +49,7 @@ export default class ViewerTree extends Component {
         this.getPageOfficeHost();
         // this.submitRequest('/sysware/api/item/point', this.props.itemQuery, (res) => this.handleViewTableChange(res.data))
     }
-    componentWillReceiveProps(nextProp, nextState) {
+    UNSAFE_componentWillReceiveProps(nextProp, nextState) {
         if (this.props.viewId !== nextProp.viewId || JSON.stringify(this.props.viewparam) !== JSON.stringify(nextProp.viewparam)) {
             this.submitRequest('/sysware/api/item/point', nextProp.itemQuery, (res) => this.handleViewTableChange(res.data))
         }

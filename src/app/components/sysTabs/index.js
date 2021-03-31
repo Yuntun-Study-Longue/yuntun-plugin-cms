@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './index.scss'
-import Tabs from 'sub-antd/lib/tabs'
+import { Tabs } from 'antd';
 const TabPane = Tabs.TabPane
 function SysTabTitle(props){
     return (

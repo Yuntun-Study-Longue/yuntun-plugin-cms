@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Form from 'sub-antd/lib/form';
+import { Form } from 'antd';
 import Input from 'sub-antd/lib/input';
 import {halfFourColLayout,fourColLayout} from "components/layout/formLayout";
 import Select from 'sub-antd/lib/select';
@@ -77,5 +77,5 @@ export class ViewExport extends Component {
         )
     }
 }
-ViewExport = Form.create()(ViewExport);
+// ViewExport = Form.create()(ViewExport);
 export default ViewExport

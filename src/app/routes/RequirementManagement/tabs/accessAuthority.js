@@ -25,7 +25,7 @@ export default class AccessAuthority extends Component {
         }  
         this.hasAuthPubKey = document.getElementById('Auth-PubKey')
     }
-    componentWillReceiveProps(nextProps, nextState) { 
+    UNSAFE_componentWillReceiveProps(nextProps, nextState) { 
         this.props.selectId!== nextProps.selectId
         && this.setState({
             selectId:nextProps.selectId,

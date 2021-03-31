@@ -18,7 +18,7 @@ export default class ImportInfo extends Component {
     componentDidMount() {
         this.getImportList()
     }
-    componentWillReceiveProps(nextProp, nextState) { 
+    UNSAFE_componentWillReceiveProps(nextProp, nextState) { 
         this.props.showModal !== nextProp.showModal
         && this.getImportList()
     }
