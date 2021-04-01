@@ -26,8 +26,31 @@ class Page extends Component {
             btnDisabledFn(){},
         }
     }
+    createAuthEle({ id, value }) {
+        const AuthEle = document.createElement('input');
+        AuthEle.id = id;
+        AuthEle.setAttribute("value", value)
+        AuthEle.hidden = true
+        if (!document.getElementById(id)) {
+            document.getElementById("extension-node").appendChild(AuthEle);
+        }
+    }
+    destoryAuthEle() {
+        document.getElementById("extension-node").removeChild(document.getElementById("Auth-PubKey"));
+        document.getElementById("extension-node").removeChild(document.getElementById("Auth-Params"));
+    }
     componentDidMount() {
         this.getUserInfo();
+        if (this.props.needAuth) {
+            this.createAuthEle({ id: 'Auth-PubKey', value: 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDHEg+yeHXNR+DE/AtcxLfQYa/VWMZybfKCERjtIvY4w6jNdzO7DZymcXXSK8k5EXs3jNckmaUPocGtplUWS+b/ZfZLFNrgEQHRIbT/OT7fj6swiSGLBkrdE8UoXP9eRwS9WTqA0aVimtQOAYwl5hRkCdow5vIUdmKOmXXVBC9czwIDAQAB' })
+            this.createAuthEle({ id: 'Auth-Params', value: '123' })
+            console.log(document.getElementById("extension-node"))
+        }
+    }
+    componentWillUnmount() {
+        if (this.props.needAuth) {
+            this.destoryAuthEle()
+        }
     }
     add(e){
         const nodeType = {

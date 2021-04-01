@@ -20,6 +20,22 @@ const handleSSR = {
                         }
                     },
                 }
+            },
+            {
+                method: ['GET', 'POST'],
+                path: "/sysware/{param*}",
+                config: {
+                    handler: {
+                        proxy: {
+                            host: '192.168.5.202',
+                            port: '8825',
+                            protocol: 'http',
+                            passThrough: true,
+                            localStatePassThrough: true,
+                            xforward: true
+                        }
+                    }
+                }
             }
         ])
     }

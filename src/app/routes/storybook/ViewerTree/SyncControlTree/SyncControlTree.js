@@ -59,9 +59,8 @@ export default class SyncControlTree extends Component {
                     toggleSelect={false} 
                     forceExpandAll={false}
                     // expandedKeys={this.props.expandedKeys} // 当你需要的时候开启
-                    defaultExpandedKeys={this.state.expandedKeys}>
-                    {loop(this.props.treeData)}
-                </Tree>
+                    defaultExpandedKeys={this.state.expandedKeys}
+                    treeData={loop(this.props.treeData)} />
             </div>
             
         </div>

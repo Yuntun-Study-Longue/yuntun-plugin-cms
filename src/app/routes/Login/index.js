@@ -37,12 +37,13 @@ class Page extends Component {
         }
     }
     loginSuccess() {
-        if (navigator.userAgent.indexOf("Firefox") != -1 || navigator.userAgent.indexOf("Chrome") !=-1) {  
-            window.location.href="requirement_management.html";  
-        } else {
-            window.opener = null;  
-            window.open("requirement_management.html", "_self");  
-        }
+        this.props.history.push('requirementManagement')
+        // if (navigator.userAgent.indexOf("Firefox") != -1 || navigator.userAgent.indexOf("Chrome") !=-1) {  
+        //     window.location.href="requirement_management.html";  
+        // } else {
+        //     window.opener = null;  
+        //     window.open("requirement_management.html", "_self");  
+        // }
     }
 
     render(){

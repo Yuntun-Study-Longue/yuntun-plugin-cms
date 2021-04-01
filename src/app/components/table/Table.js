@@ -8,7 +8,7 @@ import Pagination from 'sub-antd/lib/pagination';
 import ModalDocument from './model/Modal.js';
 import {BaseInfoAdd, DocTypeAdd, DocTypeEdit,DocAdd,DocConfigAdd,DocConfigImport
 } from 'components/baseInfo/infoType';
-import './table.css'
+import './table.scss'
 
 export default class SyswareTable extends Component {
   static defaultProps = {

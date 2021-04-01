@@ -1,4 +1,5 @@
 const Hapi = require('hapi');
+const path = require('path')
 
 let app = require('./server').default;
 
@@ -25,14 +26,15 @@ const init = async () => {
     }
   });
   await server.register(require('inert'))
+  await server.register(require('h2o2'))
   server.route([
     {
       method: 'GET',
-      path: "/static/{param*}",
+      path: "/public/{param*}",
       config: {
         handler: {
           directory: { 
-            path: './static' ,
+            path: '.' ,
             redirectToSlash: true,
             index: true,
             listing: true,

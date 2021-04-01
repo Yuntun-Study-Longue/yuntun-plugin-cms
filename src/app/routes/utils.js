@@ -3,6 +3,11 @@ import axios from "axios";
 import SysModal from 'components/sysModal';
 import message from "sub-antd/lib/message";
 
+export function Encrypt(json_str) {
+    var cryptor = new JSEncrypt();
+    cryptor.setPublicKey(document.getElementById('Auth-PubKey').value);
+    return cryptor.encrypt(json_str);
+}
 // 状态码错误信息
 const codeMessage = {
     200: "服务器成功返回请求的数据。",
@@ -54,17 +59,21 @@ axios.interceptors.request.use(
         if (!config.LOADINGHIDE && !loadingInstance) {
             loadingInstance = message.loading("正在执行中...", 0);
         }
-        const authorization = getCookie("Authorization");
-        config.headers.Authorization = authorization;
-        if (document.getElementById("Auth-PubKey")) {
-            config.headers["Accept-Acl-Enable"] = true;
-            config.headers["Auth-Data"] = Encrypt(
-                document.getElementById("Auth-Params").value
-            );
-        } else {
-            config.headers["Accept-Acl-Enable"] = false;
+        try {
+            const authorization = getCookie("Authorization");
+            config.headers.Authorization = authorization;
+            if (document.getElementById("Auth-PubKey")) {
+                config.headers["Accept-Acl-Enable"] = true;
+                config.headers["Auth-Data"] = Encrypt(
+                    document.getElementById("Auth-Params").value
+                );
+            } else {
+                config.headers["Accept-Acl-Enable"] = false;
+            }
+            return config;
+        } catch (e) {
+            console.log(e, '=== error')
         }
-        return config;
     },
     function (error) {
         SysModal.error("加载超时");

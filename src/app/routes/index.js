@@ -44,6 +44,12 @@ const RequirementManagement = Loadable({
   modules: ["requirement-management"]
 });
 
+const RequirementManagementConfig = Loadable({
+  loader: () => import(/* webpackChunkName: "requirement-management-config" */ "./RequirementManagement"),
+  loading: () => null,
+  modules: ["requirement-management-config"]
+});
+
 const RequriementFullPage = Loadable({
   loader: () => import(/* webpackChunkName: "requirement-full-page" */ "./RequriementFullPage"),
   loading: () => null,
@@ -56,7 +62,8 @@ export default () => (
     <Route exact path="/login" component={Login} />
     <Route exact path="/docList" component={DocList} />
     <Route exact path="/fundamentalDataManagement" component={FundamentalDataManagement} />
-    <Route exact path="/requirementManagement" component={RequirementManagement} />
+    <Route exact path="/requirementManagement" render={props => <RequirementManagement {...props} needAuth={true} />} />
+    <Route exact path="/requirementManagementConfig" component={RequirementManagementConfig} />
     <Route exact path="/requriementFullPage" component={RequriementFullPage} />
     <Route exact path="/historyRecord" component={HistoryRecord} />
     <Route exact path="/requirementDocumentConfig" component={RequirementDocumentConfig} />

@@ -6,8 +6,8 @@ import { Layout, Icon, Button } from 'antd'
 import SiderMenu from './SiderMenu'
 import Routes from "./routes";
 import { toggleSiderMenu } from "../modules/layout";
+import './routes/utils';
 import './app.css';
-import '@ant-design/compatible/assets/index.css'
 
 const { Sider, Content, Header } = Layout
 
@@ -15,7 +15,7 @@ const App = ({ toggleSiderMenu, history }) => (
   <Layout className="app">
     <Header className="app__header">
       <h2 className="app__logo">
-        {/* <Icon type="ant-design" /> IDP-Ant Design */}
+        IDP-Ant Design
       </h2>
     </Header>
 
