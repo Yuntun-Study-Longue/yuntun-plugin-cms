@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './index.scss'
-import Dropdown from 'sub-antd/lib/dropdown'
-import Menu from 'sub-antd/lib/menu'
+// import Dropdown from 'sub-antd/lib/dropdown'
+// import Menu from 'sub-antd/lib/menu'
+import { Menu, Dropdown } from 'antd';
 import SysIcon from 'components/sysIcon'
 
 const findIndex = (name, enums = ['无', '读取', '修改', '删除', '管理', '继承'] || []) => {

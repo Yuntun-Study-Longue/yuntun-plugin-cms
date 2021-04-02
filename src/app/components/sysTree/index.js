@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import './index.scss'
 import axios from 'axios'
-import Tree from 'sub-antd/lib/tree'
+import { Tree } from 'antd';
+// import Tree from 'sub-antd/lib/tree'
 const TreeNode = Tree.TreeNode
 import SysIcon from 'components/sysIcon'
 import SysModal from 'components/sysModal'

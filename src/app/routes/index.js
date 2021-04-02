@@ -59,13 +59,13 @@ const RequriementFullPage = Loadable({
 export default () => (
   <Switch>
     <Route exact path="/" component={Home} />
-    <Route exact path="/login" component={Login} />
-    <Route exact path="/docList" component={DocList} />
-    <Route exact path="/fundamentalDataManagement" component={FundamentalDataManagement} />
-    <Route exact path="/requirementManagement" render={props => <RequirementManagement {...props} needAuth={true} />} />
-    <Route exact path="/requirementManagementConfig" component={RequirementManagementConfig} />
-    <Route exact path="/requriementFullPage" component={RequriementFullPage} />
-    <Route exact path="/historyRecord" component={HistoryRecord} />
-    <Route exact path="/requirementDocumentConfig" component={RequirementDocumentConfig} />
+    <Route exact path="/login.html" component={Login} />
+    <Route exact path="/doclist.html" component={DocList} />
+    <Route exact path="/fundamental_data_management.html" component={FundamentalDataManagement} />
+    <Route exact path="/requirement_management.html" render={props => <RequirementManagement {...props} needAuth={true} />} />
+    <Route exact path="/requirement_management_config.html" component={RequirementManagementConfig} />
+    <Route exact path="/requirement_fullpage.html" component={RequriementFullPage} />
+    <Route exact path="/doc_history_record.html" component={HistoryRecord} />
+    <Route exact path="/requirement_document_config.html" component={RequirementDocumentConfig} />
   </Switch>
 );
