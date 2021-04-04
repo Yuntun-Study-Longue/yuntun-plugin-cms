@@ -29,7 +29,6 @@ export const renderApp = async (request, h) => {
             </Loadable.Capture>
         )
     )
-  
     const html =
       // prettier-ignore
       `<!doctype html>
@@ -51,6 +50,15 @@ export const renderApp = async (request, h) => {
               ? `<script src="${assets.client.js}" defer></script>`
               : `<script src="${assets.client.js}" defer crossorigin></script>`
           }
+          <script type="text/javascript" src="/public/jsencrypt.min.js"></script>
+          <script type="text/javascript" src="/public/jquery-1.8.3.min.js"></script>
+          <script type="text/javascript">
+            function Encrypt(json_str) {
+                var cryptor = new JSEncrypt();
+                cryptor.setPublicKey(document.getElementById('Auth-PubKey').value);
+                return cryptor.encrypt(json_str);
+            }
+          </script>
       </head>
       <body>
           <div id="root">${markup}</div>

@@ -1,0 +1,16 @@
+$f14:14px;
+$blue:#007EC2;
+.navigator{
+    padding: 13px 0;
+    font-size: $f14;
+    color: #007EC2;
+    .current-path{
+        color: #666;
+        font-weight: normal;
+        font-size: $f14;
+    }
+}
+.ant-breadcrumb a,.ant-breadcrumb-separator{
+    color:#666;
+    font-size: $f14;
+}

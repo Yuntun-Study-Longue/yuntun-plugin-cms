@@ -1,0 +1,18 @@
+.navBar-wrap{
+    height: 40px;
+    padding: 10px 0 0 20px;
+    background-color: #F3F3F3;
+    .navBar-menu{
+        width: 16px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 16px;
+        color:#999999;
+        cursor: pointer;
+    }
+    .navBar-main-menu{
+        height: 20px;
+        line-height: 20px;
+        margin-left: 20px;
+    }
+}

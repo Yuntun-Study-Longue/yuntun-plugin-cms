@@ -1,0 +1,28 @@
+
+.tool-modal > textarea{
+    min-width: 100%;
+    min-height: 100px;
+}
+.tool-modal > .form-description-tip{
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    bottom: -18px;
+    color: #999;
+    line-height: 1;
+}
+.ant-form-item {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #666;
+}
+.ant-select-dropdown-menu-item {
+    padding: 0 15px;
+}
+/* 使用 css 技巧来动态设置的对话框位置 */
+.vertical-center-modal {
+    margin-top: -18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

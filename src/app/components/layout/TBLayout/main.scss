@@ -1,0 +1,28 @@
+.TbLayout-container{
+    // width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.TbLayout-split{
+    height: 8px;
+    position: relative;
+    background-color: #fff;
+    border-top:1px solid grey;
+    border-bottom:1px solid grey;
+}
+.TbLayout-icon-area{
+    margin: -1px auto 0 auto;
+    width: 65px;
+}
+.TbLayout-icon{
+    float: left;
+    height: 8px;
+    width: 65px;
+    cursor: pointer;
+}
+.arrow-top{
+    background: url(./img/arrow-top.png) no-repeat center center;
+}
+.arrow-bottom{
+    background: url(./img/arrow-bottom.png) no-repeat center center;
+}

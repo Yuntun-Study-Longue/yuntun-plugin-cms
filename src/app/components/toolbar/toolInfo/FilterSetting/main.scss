@@ -1,0 +1,40 @@
+.condition-set {
+    width: 100%;
+    height: auto;
+    max-height: 138px;
+    display: block;
+    overflow-y: auto;
+    padding: 5px 10px;
+    padding-bottom: 10px;
+    border: 1px solid #e9e9e9;
+}
+.condition-item {
+  margin: 10px 0 0 0;
+}
+
+.opeation-icon{
+    // padding:5px 5px 5px 10px;
+    // background:none;
+    // height: 26px;
+    .icon{
+      display: inline-block;
+      width: 16px;
+      height:16px;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+      background-position: left center;
+      cursor: pointer;
+    }
+    .icon-add{
+      background-image: url('./img/add.png');
+    }
+    .icon-del{
+      background-image: url('./img/del.png');
+    }
+}
+.ant-select-dropdown-menu-item {
+    padding: 1px 2px;
+}
+.ant-input {
+  height: 30px !important;
+}

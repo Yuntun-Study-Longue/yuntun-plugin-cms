@@ -1,0 +1,36 @@
+.sys-transfer{
+    height: 383px;
+    width: 100%;
+    .sys-transfer-left,
+    .sys-transfer-right{
+        height: 100%;
+        width: calc((100% - 80px)/2);
+        border: 1px solid #e9e9e9;
+        border-radius: 5px 5px 0 0;
+    }
+    .tool-bar{
+        height: 40px;
+        line-height: 40px;
+        width: calc((100% - 80px)/2);
+    }
+    .sys-transfer-center{
+        height: 100%;
+        width: 80px;
+        .sys-transfer-operation{
+            width: 60px;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            .ant-btn{
+                width: 100%;
+                margin-top: 10px;
+                color:#999999;
+            }
+        }
+    }
+    .sysToolBar{
+        border-bottom: none;
+    }
+
+}

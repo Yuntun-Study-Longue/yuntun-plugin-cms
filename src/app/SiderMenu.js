@@ -38,6 +38,11 @@ const links = [
     icon: 'usercenter',
   },
   {
+    label: 'Requirement Management Config',
+    url: '/requirementManagementConfig',
+    icon: 'usercenter',
+  },
+  {
     label: 'Requriement Full Page',
     url: '/requriementFullPage',
     icon: 'usercenter',

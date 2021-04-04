@@ -1,0 +1,74 @@
+.opeation-icon {
+  padding: 0px 5px 0px 10px;
+  background: #f7f7f7;
+  height: 40px;
+  line-height: 40px;
+  .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    background-position: left center;
+    cursor: pointer;
+  }
+  .tl-icon {
+    position: absolute;
+    right: 0;
+    display: inline;
+  }
+  .icon-back {
+    background-image: url("assets/images/system/tool/返回.png");
+  }
+}
+.docTipsText {
+  border-bottom: 1px solid #d8d8d8;
+  line-height: 32px;
+  text-indent: 50px;
+  color: #999; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 50px;
+}
+.ant-upload-list{ 
+  // display:inline-block !important;
+  // width: 70% !important;
+  // margin-left: 40px;
+
+    position: absolute !important;
+    // width: 70% !important;
+    left: 65px !important;
+    top: 4px !important;
+}
+.ant-upload-list-item{
+  margin-top: 0 !important;
+}
+
+.editBtn{
+  position: absolute;
+  left:30px;
+  top: 0;
+  display:none
+}
+.editBtn-have{
+  position: absolute;
+  left:30px;
+  top: 0;
+ display: block;
+}
+// .ant-form-item-label{
+// padding-top: 15px !important;
+// }
+.tipsIcon{
+  color:#6398b4 !important;
+  font-size:12px;
+  vertical-align:middle;
+  margin:0 2px;
+  // color:'#6398b4',fontSize:10,verticalAlign:'4px',margin:'0 2px'
+} 
+ .ant-upload-list-item-secrety{   
+  width: auto !important; 
+  max-width: 470px; 
+  margin-top: -3px;
+ }

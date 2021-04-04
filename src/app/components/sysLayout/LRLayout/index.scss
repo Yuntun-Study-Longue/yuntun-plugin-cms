@@ -1,0 +1,49 @@
+.LRLayout-container,
+.LRLayout-left,
+.LRLayout-right{
+    height: 100%;
+    overflow: hidden;
+}
+.LRLayout-split{
+    width: 10px;
+    height: 100%;
+    background-color: #F3F3F3;
+}
+.LRLayout-left,
+.LRLayout-split,
+.LRLayout-right{
+    float: left;
+}
+.arrow-left,
+.arrow-right{
+    width: 9px;
+    height: 48px;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+.LRLayout-split:hover .arrow-left{
+    display: block;
+}
+.arrow-left{
+    display: none;
+    left:-9px;
+    background: url(./img/arrow-left.png) no-repeat center center;
+}
+.arrow-right{
+    display: block;
+    left:10px;
+    background: url(./img/arrow-right.png) no-repeat center center;
+}
+.LRLayout-left-panel{
+    height:100%;
+    padding-right: 2px;
+    padding-top: 1px;
+}
+.LRLayout-right-panel{
+    height:100%;
+    padding-left: 2px;
+    padding-top: 1px;
+}
