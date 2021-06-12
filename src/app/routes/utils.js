@@ -1,13 +1,6 @@
 require("console-polyfill");
 import axios from "axios";
-import SysModal from 'components/sysModal';
-import message from "sub-antd/lib/message";
 
-export function Encrypt(json_str) {
-    var cryptor = new JSEncrypt();
-    cryptor.setPublicKey(document.getElementById('Auth-PubKey').value);
-    return cryptor.encrypt(json_str);
-}
 // 状态码错误信息
 const codeMessage = {
     200: "服务器成功返回请求的数据。",
@@ -97,19 +90,19 @@ axios.interceptors.response.use(
             return response;
         } else {
             //错误处理
-            if (response.data) {
-                if (response.data.code === 100 && /^视图\S*重复！$/.test(response.data.message)) {
-                    return SysModal.warning(response.data.message);
-                }
-                if (response.data.code === 100 && /^文档模板不存在\S*上传文档模板$/.test(response.data.message)) {
-                    return SysModal.info(response.data.message);
-                }
-                else {
-                    SysModal.error(response.data.message);
-                }
-            } else {
-                SysModal.error("请求错误，请重试！");
-            }
+            // if (response.data) {
+            //     if (response.data.code === 100 && /^视图\S*重复！$/.test(response.data.message)) {
+            //         return SysModal.warning(response.data.message);
+            //     }
+            //     if (response.data.code === 100 && /^文档模板不存在\S*上传文档模板$/.test(response.data.message)) {
+            //         return SysModal.info(response.data.message);
+            //     }
+            //     else {
+            //         SysModal.error(response.data.message);
+            //     }
+            // } else {
+            //     SysModal.error("请求错误，请重试！");
+            // }
             console.error("axios请求错误：", response);
         }
     },
@@ -135,17 +128,17 @@ axios.interceptors.response.use(
             console.error("axios请求错误：", error, error.response);
 
             // 错误状态处理
-            if (status === 401 && location.href.indexOf("login.html") < 0) {
-                //typeof sysLoginDialog === "function" && sysLoginDialog();
-                //记录登录超时的页面
-                localStorage.setItem("reloginToPath", location.pathname);
-                //跳转至重新登录页面
-                location.pathname = "/p_401.html";
-            } else if (status === 403) {
-                // router.push("/login");
-            } else if (status >= 404 && status < 422) {
-                // router.push("/404");
-            }
+            // if (status === 401 && location.href.indexOf("login.html") < 0) {
+            //     //typeof sysLoginDialog === "function" && sysLoginDialog();
+            //     //记录登录超时的页面
+            //     localStorage.setItem("reloginToPath", location.pathname);
+            //     //跳转至重新登录页面
+            //     location.pathname = "/p_401.html";
+            // } else if (status === 403) {
+            //     // router.push("/login");
+            // } else if (status >= 404 && status < 422) {
+            //     // router.push("/404");
+            // }
         }
 
         return Promise.reject(error);

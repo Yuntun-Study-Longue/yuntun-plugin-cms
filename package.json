@@ -12,7 +12,8 @@
     "test": "razzle test --env=jsdom --watchAll",
     "start:prod": "cross-env NODE_ENV=production node build/server.js",
     "prestart:prod": "npm run build",
-    "preexport": "npm run build"
+    "preexport": "npm run build",
+    "prestart": "npm run build:comp"
   },
   "keywords": [
     "node  10.23.0",

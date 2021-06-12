@@ -22,41 +22,6 @@ const links = [
     url: '/login',
     icon: 'facebook',
   },
-  {
-    label: 'Doc List',
-    url: '/docList',
-    icon: 'add',
-  },
-  {
-    label: 'Fundamental Data Management',
-    url: '/fundamentalDataManagement',
-    icon: 'service-fill',
-  },
-  {
-    label: 'Requirement Management',
-    url: '/requirementManagement',
-    icon: 'usercenter',
-  },
-  {
-    label: 'Requirement Management Config',
-    url: '/requirementManagementConfig',
-    icon: 'usercenter',
-  },
-  {
-    label: 'Requriement Full Page',
-    url: '/requriementFullPage',
-    icon: 'usercenter',
-  },
-  {
-    label: 'History Record',
-    url: '/historyRecord',
-    icon: 'usercenter',
-  },
-  {
-    label: 'Requirement Document Config',
-    url: '/requirementDocumentConfig',
-    icon: 'usercenter',
-  },
 ]
 
 class SiderMenu extends Component {
